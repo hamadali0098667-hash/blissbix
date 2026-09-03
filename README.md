@@ -70,23 +70,29 @@ npm run dev
 ```
 The frontend will run on `http://localhost:5173`.
 
-## 📦 Deployment Guide (Vercel & Render)
+## 📦 Deployment Guide (Vercel)
 
-### Deploying the Backend (Render / Railway)
+This project is configured to deploy both the frontend and backend separately on Vercel from the same repository.
+
+### 1. Deploying the Backend (Vercel)
 1. Push your code to GitHub.
-2. Go to [Render](https://render.com/) and create a new **Web Service**.
-3. Connect your GitHub repo and select the `server` folder as the root directory.
-4. Set the build command to `npm install` and start command to `node server.js`.
-5. Add your `.env` variables (MONGO_URI, JWT_SECRET) in Render's environment settings.
-6. Deploy! Copy the live backend URL.
+2. Go to [Vercel](https://vercel.com/) and click **Add New > Project**.
+3. Import your GitHub repository.
+4. Set **Project Name** to `blissbix-backend`.
+5. Leave the **Framework Preset** as "Other" and **Root Directory** empty (default).
+6. Add Environment Variables:
+   - `MONGO_URI`: Your MongoDB connection string.
+   - `JWT_SECRET`: Your secret key.
+7. Click **Deploy**. Copy the live backend URL (e.g., `https://blissbix-backend.vercel.app`).
 
-### Deploying the Frontend (Vercel)
-1. Go to `client/src/services/api.js` and change the `baseURL` to your live Render backend URL.
-2. Commit and push the changes to GitHub.
-3. Go to [Vercel](https://vercel.com/) and import your GitHub repository.
-4. Set the Root Directory to `client`.
-5. Vercel will automatically detect Vite. Click **Deploy**.
-6. Your Blissbix store is now live!
+### 2. Deploying the Frontend (Vercel)
+1. In Vercel, click **Add New > Project** again and import the same repository.
+2. Set **Project Name** to `blissbix-client`.
+3. Set **Framework Preset** to **Vite**.
+4. Set **Root Directory** to `client`.
+5. Add Environment Variables:
+   - `VITE_API_URL`: Your backend URL + `/api` (e.g., `https://blissbix-backend.vercel.app/api`).
+6. Click **Deploy**. Your Blissbix store is now live!
 
 ---
 *Built with ❤️ during the 6-Week MERN Stack Internship.*
