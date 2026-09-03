@@ -29,39 +29,39 @@ export default function Shop() {
         <p className="text-sm font-medium text-gray-500 hidden md:block">Showing {products.length} products</p>
       </div>
       
-      <div className="flex flex-col lg:flex-row gap-10">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
         {/* Sidebar Filters */}
         <div className="w-full lg:w-64 flex-shrink-0">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 sticky top-24">
-            <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm border-b pb-3">Categories</h3>
-            <ul className="space-y-3">
-              <li>
+          <div className="bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-gray-100 lg:sticky lg:top-24">
+            <h3 className="font-bold text-gray-900 mb-4 lg:mb-6 uppercase tracking-wider text-sm border-b pb-2 lg:pb-3">Categories</h3>
+            <ul className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible space-x-4 lg:space-x-0 space-y-0 lg:space-y-3 pb-2 lg:pb-0 scrollbar-hide">
+              <li className="flex-shrink-0">
                 <Link to="/shop" className={`flex items-center text-sm ${!searchParams.get('category') && !searchParams.get('gender') ? "font-bold text-indigo-600" : "text-gray-600 hover:text-indigo-500 transition-colors"}`}>
-                  <span className="w-2 h-2 rounded-full mr-3 bg-current opacity-70"></span>
+                  <span className="w-2 h-2 rounded-full mr-2 lg:mr-3 bg-current opacity-70"></span>
                   All Products
                 </Link>
               </li>
-              <li>
+              <li className="flex-shrink-0">
                 <Link to="/shop?gender=Men" className={`flex items-center text-sm ${searchParams.get('gender') === 'Men' ? "font-bold text-indigo-600" : "text-gray-600 hover:text-indigo-500 transition-colors"}`}>
-                  <span className="w-2 h-2 rounded-full mr-3 bg-current opacity-70"></span>
+                  <span className="w-2 h-2 rounded-full mr-2 lg:mr-3 bg-current opacity-70"></span>
                   Men's Wear
                 </Link>
               </li>
-              <li>
+              <li className="flex-shrink-0">
                 <Link to="/shop?gender=Women" className={`flex items-center text-sm ${searchParams.get('gender') === 'Women' ? "font-bold text-indigo-600" : "text-gray-600 hover:text-indigo-500 transition-colors"}`}>
-                  <span className="w-2 h-2 rounded-full mr-3 bg-current opacity-70"></span>
+                  <span className="w-2 h-2 rounded-full mr-2 lg:mr-3 bg-current opacity-70"></span>
                   Women's Wear
                 </Link>
               </li>
-              <li>
+              <li className="flex-shrink-0">
                 <Link to="/shop?gender=Accessories" className={`flex items-center text-sm ${searchParams.get('gender') === 'Accessories' ? "font-bold text-indigo-600" : "text-gray-600 hover:text-indigo-500 transition-colors"}`}>
-                  <span className="w-2 h-2 rounded-full mr-3 bg-current opacity-70"></span>
+                  <span className="w-2 h-2 rounded-full mr-2 lg:mr-3 bg-current opacity-70"></span>
                   Accessories
                 </Link>
               </li>
-              <li>
+              <li className="flex-shrink-0">
                 <Link to="/shop?gender=Kids" className={`flex items-center text-sm ${searchParams.get('gender') === 'Kids' ? "font-bold text-indigo-600" : "text-gray-600 hover:text-indigo-500 transition-colors"}`}>
-                  <span className="w-2 h-2 rounded-full mr-3 bg-current opacity-70"></span>
+                  <span className="w-2 h-2 rounded-full mr-2 lg:mr-3 bg-current opacity-70"></span>
                   Kids Collection
                 </Link>
               </li>
