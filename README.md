@@ -4,6 +4,10 @@ Blissbix is a fully functional, premium fashion e-commerce web application built
 
 ![Blissbix Demo](https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
+## 🔗 Live Demo
+- **Frontend (Store):** [https://blissbix-client.vercel.app](https://blissbix-client.vercel.app)
+- **Backend API:** [https://blissbix-backend.vercel.app](https://blissbix-backend.vercel.app)
+
 ## 🚀 Features
 
 ### Customer Features
